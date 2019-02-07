@@ -1,0 +1,24 @@
+<table class="table table-striped" *ngIf="list&&list.length >0">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Me siento...</th>
+      <th scope="col">Acciones</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of list">
+      <th scope="row">{{ item.id}}</th>
+      <td>
+        <!-- <img [src]="item.imgUrl" class="mr-2" style="width: 60px"> -->
+        {{ item.desc }}
+      </td>
+      <td>
+        <button mat-stroked-button color="primary" class="m-1" (click)="onClicked_viewDetail(item)">Detalle</button>
+        <button mat-stroked-button color="accent" class="m-1" (click)="onClicked_select(item)">Elegir</button>
+      </td>
+
+    </tr>
+  </tbody>
+</table>

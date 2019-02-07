@@ -1,0 +1,15 @@
+<ng-container *ngFor="let item of list" >
+
+  <div *ngIf="list" class="d-block mx-auto" style="min-width: 300px;max-width: 500px;">
+    <mat-card class="m-2">
+
+      <mat-card-title>{{item.desc}}</mat-card-title>
+      <!-- <img mat-card-lg-image [src]="item.imgUrl" width="50px"> -->
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" class="m-1"
+          (click)="onClicked_viewDetail(item,false)">Detalle</button>
+        <button mat-stroked-button color="accent" class="m-1" (click)="onClicked_select(item,true)">Elegir</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-container>
